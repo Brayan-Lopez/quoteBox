@@ -6,6 +6,21 @@ html{
   box-sizing: inherit;
 }
 
+*::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+  background-color: #e4e4e463;
+  border-radius: .5rem;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: #076a75a3;
+  border-radius: .5rem;
+}
+
+*::-webkit-scrollbar-thumb:hover{
+  background-color: #075d67;
+}
+
 body{
   margin: 0;
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
@@ -16,11 +31,11 @@ body{
   position: relative;
   display: inline-block;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .quoteBox{
-  position: relative;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -34,19 +49,34 @@ body{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
   width: 85%;
   max-width: 60rem;
+  max-height: 38rem;
   min-height: 18rem;
+  padding-bottom: 6.5rem;
+  padding-top: 1.5rem;
+  padding: 1.5rem 1rem 6.5rem 0rem;
   display: inline-block;
   border-radius: 2rem;
   border: solid 3px #252525cb;
-  padding: 2rem 4rem 4rem 6.4rem;
   text-align: left;
   box-shadow: 0px 10px 15px #252525cb;
+}
+
+.quoteBox div{
+  position: relative;
+  overflow-x: hidden;
+  max-height: 30rem;
+  min-height: 8rem;
+  padding: 0rem 2rem 0rem 6rem;
+}
+
+.quote2{
+  display: none;
 }
 
 .quoteBox span{
   position: absolute;
   left: 2rem;
-  top: 1.5rem;
+  top: -.5rem;
   font-size: 6rem;
 }
 
@@ -71,4 +101,24 @@ body{
 .quoteButton:hover{
   width: 5rem;
   height: 5rem;
+}
+
+@media (max-width: 400px) {
+  .quoteBox{
+    padding: 1.5rem 1rem 6.5rem 1.5rem;
+    max-height: 38rem;
+  }
+
+  .quoteBox div{
+    padding: 0rem 1rem 0rem 1rem;
+    overflow-x: hidden;
+    max-height: 30rem;
+  }
+
+  .quote2{
+    display: block;
+  }
+  .quote1{
+    display: none;
+  }
 }
