@@ -1,0 +1,74 @@
+html{
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  width: 100%;
+}
+
+.App{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+}
+
+.quoteBox{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 28%, rgba(237,237,237,1) 59%, rgba(237,237,237,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(28%, rgba(246,246,246,1)), color-stop(59%, rgba(237,237,237,1)), color-stop(100%, rgba(237,237,237,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 28%, rgba(237,237,237,1) 59%, rgba(237,237,237,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 28%, rgba(237,237,237,1) 59%, rgba(237,237,237,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 28%, rgba(237,237,237,1) 59%, rgba(237,237,237,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 28%, rgba(237,237,237,1) 59%, rgba(237,237,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+  width: 85%;
+  max-width: 60rem;
+  min-height: 18rem;
+  display: inline-block;
+  border-radius: 2rem;
+  border: solid 3px #252525cb;
+  padding: 2rem 4rem 4rem 6.4rem;
+  text-align: left;
+  box-shadow: 0px 10px 15px #252525cb;
+}
+
+.quoteBox span{
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
+  font-size: 6rem;
+}
+
+.quoteBox h3{
+  margin-left: 3rem;
+}
+
+.quoteButton{
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  border: solid 3px #252525cb;
+  font-size: 4rem;
+  color: rgb(254, 254, 237);
+  box-shadow: 0px 10px 15px #252525;
+  cursor: pointer;
+}
+
+.quoteButton:hover{
+  width: 5rem;
+  height: 5rem;
+}
